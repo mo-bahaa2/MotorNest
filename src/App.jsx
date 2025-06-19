@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Lauout from './component/layout/Lauout'
+
 import Home from './component/Home/Home'
 import Login from './component/Login/Login'
 import Register from './component/Register/Register'
@@ -14,11 +14,12 @@ import { Toaster } from 'react-hot-toast'
 import ProdectRoute from './component/ProductedRoute/ProdectRoute'
 import ProductDetails from './component/ProductDetails/ProductDetails'
 import CarsContextProvider from './context/CarsContext'
+import Layout from './component/Layout/Lauout'
 
 function App() {
   const routers = createBrowserRouter([{
     path: '',
-    element: <Lauout />,
+    element: <Layout/>,
     children: [
       { index: true, element: <ProdectRoute><Home/></ProdectRoute> },
       { path: 'login', element: <Login/> },
